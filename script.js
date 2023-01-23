@@ -38,11 +38,13 @@ generateBill.addEventListener('click', () => {
 
 
 // <======= code to reset calculation form starts=======>
-rstBtn.addEventListener('click', () => {
+const resetFields = () => {
     amount.value = '';
     noOfPeople.value = '';
     document.querySelector('input[name="tip"]:checked').checked = false;
     tipAmntPerPerson.innerText = '₹ 0.00';
     totalAmntPerPerson.innerText = '₹ 0.00';
-})
+    rstBtn.style.display = 'none';
+
+}
 // <======= code to reset calculation form ends=======>
